@@ -15,6 +15,7 @@ module ActionSubscriber
               :content_type => properties[:content_type],
               :delivery_tag => delivery_info.delivery_tag,
               :exchange => delivery_info.exchange,
+              :headers => properties.headers,
               :message_id => nil,
               :routing_key => delivery_info.routing_key,
             }
@@ -34,6 +35,7 @@ module ActionSubscriber
               :content_type => properties.content_type,
               :delivery_tag => delivery_info.delivery_tag,
               :exchange => delivery_info.exchange,
+              :headers => properties.headers,
               :message_id => properties.message_id,
               :routing_key => delivery_info.routing_key,
             }
